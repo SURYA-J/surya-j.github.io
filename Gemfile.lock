@@ -23,7 +23,7 @@ GEM
     commonmarker (0.23.10)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
-    dnsruby (1.70.0)
+    dnsruby (1.71.0)
       simpleidn (~> 0.2.1)
     drb (2.2.1)
     em-websocket (0.5.3)
@@ -269,6 +269,7 @@ GEM
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
     uri (0.13.0)
+    webrick (1.8.1)
 
 PLATFORMS
   aarch64-linux
@@ -277,9 +278,12 @@ PLATFORMS
   x86-linux
   x86_64-darwin
   x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   github-pages
+  jekyll
+  webrick
 
 BUNDLED WITH
    2.5.6

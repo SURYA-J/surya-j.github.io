@@ -1,17 +1,13 @@
-const hamburger = document.getElementById('hamburger'); 
-const menu = document.querySelector('.menu'); 
-
-hamburger.addEventListener('click', function () { 
-	const hamIcon = this.querySelector('.hamburger-icon'); 
-	const crossIcon = this.querySelector('.cross-icon'); 
-	if (hamIcon.style.display === "none") { 
-		hamIcon.style.display = "inline-block"
-		menu.style.display = "none"
-		crossIcon.style.display = "none"
-	} 
-	else { 
-		crossIcon.style.display = "inline-block"
-		hamIcon.style.display = "none"
-		menu.style.display = "block"
-	} 
+document.getElementById('changeColorBtn').addEventListener('click', function() {
+    var randomColor = getRandomColor();
+    document.body.style.backgroundColor = randomColor;
 });
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
